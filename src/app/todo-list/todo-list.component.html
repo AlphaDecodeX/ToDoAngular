@@ -1,0 +1,11 @@
+<div
+  class="row mt-5 justify-content-center"
+  *ngFor="let todo of todos; let i = index"
+>
+  <div class="col-6 rounded border border-success">
+    <p>{{ todo.name }}</p>
+  </div>
+  <div class="col-6">
+    <button class="btn btn-danger" (click)="onDelete(i)">Delete</button>
+  </div>
+</div>

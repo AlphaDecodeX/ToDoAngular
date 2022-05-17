@@ -1,0 +1,21 @@
+<!-- 
+  AppComponent
+    - Todo Header
+    - Todo List
+      - Todo List Item
+        - Todo List Item Detail
+ -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <input type="text" class="form-control" placeholder="Todo" #todo />
+    </div>
+    <div class="col-4">
+      <button class="btn btn-success" (click)="onAddTodo(todo)">
+        Add Todo
+      </button>
+    </div>
+  </div>
+  <app-todo-list [todoAdded]="todoAdded"></app-todo-list>
+</div>
